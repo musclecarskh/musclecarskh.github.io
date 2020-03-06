@@ -971,6 +971,10 @@ Footer
     text-transform: capitalize;
 }
 
+.footer .dev {
+	text-transform: none !important;
+}
+
 .scroll-up {
     position: fixed;
 	font-size: 28px;
