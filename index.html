@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script
+        src="https://js-de.sentry-cdn.com/e3f75a5d75dfa911c80e794631e3e3f3.min.js"
+        crossorigin="anonymous"
+    ></script>
+
+    <script>
+        Sentry && Sentry.onLoad(function() {
+          Sentry.init({
+            // Performance Monitoring
+            tracesSampleRate: 1.0, // Capture 100% of the transactions
+            // Session Replay
+            replaysSessionSampleRate: 1.0, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+            replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+          });
+        });
+    </script>
     <!-- SITE TITLE -->
     <title>American Muscle Cars Харьков</title>
     <meta name="description" content="Клуб владельцев американских Musclecar & Ponycar">
